@@ -1,0 +1,47 @@
+import java.util.Scanner; 
+public class Calendar {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		char [] daysOfWeek = {'U', 'M', 'T','W','H','F','S'};
+		String [] months = {"January","February", "March","April", "May", "June","July", "August","September","October","Novemember","December" };
+		System.out.println("Enter day in format x : ");
+		int d = sc.nextInt();
+		System.out.println("Enter month in format x : ");
+		int m = sc.nextInt();
+		System.out.println("Enter year in format xxxx : ");
+		int y = sc.nextInt();
+		int leapYear = y % 4;
+		int days = 0;
+		
+		switch (months[m])
+		{
+		case "January":
+		case "March":
+		case "May":
+		case "July":
+		case "August":
+		case "October":
+		case "December":
+			days = 31;
+			break;
+		case "April":
+		case "June":
+		case "September":
+		case "November":
+			days = 30;
+			break;
+		case "February":
+		{
+			if(leapYear == 0)
+				days = 29;
+			else
+				days = 28;
+		}
+		break;
+		default:
+			break;
+	}
+	}
+}
