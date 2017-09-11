@@ -1,0 +1,21 @@
+		char [] daysOfWeek = {'U', 'M', 'T','W','H','F','S'};
+		String [] months = {"","January","February", "March","April", "May", "June","July", "August","September","October","Novemember","December" };
+		 int[] days = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		System.out.println("Enter day in format x : ");
+		int _d = sc.nextInt();
+		System.out.println("Enter month in format x : ");
+		int _m = sc.nextInt();
+		System.out.println("Enter year in format xxxx : ");
+		int _y = sc.nextInt();
+		int leapYear = _y % 4;
+		int leapYearx = _y % 100;
+		int leapYeary = _y % 400;
+		
+		if(leapYear == 0 && leapYearx != 0 || (leapYear == 0 && leapYearx == 0 && leapYeary == 0))
+			days[2] = 29;
+		
+		int d = dayOfWeek(_d,_m,_y);
+		
+		System.out.println("  "+ months[_m] + _y);
+				
+	}
