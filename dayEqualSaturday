@@ -1,0 +1,21 @@
+for (int i = 1; i < days[_m]; i++ )
+		{
+					if(d + i == 7 || (d + i) % 7 + 6 == 6)
+			{
+				
+					if (i > 9)
+						System.out.println(i+ " ");
+						else
+							System.out.println(i + "  ");
+			}
+				
+				else 
+			{
+					if (i > 9)
+						System.out.print(i+ " ");
+						else
+							System.out.print(i + "  ");
+			}
+				
+		  }
+		}
